@@ -75,7 +75,7 @@ const Products = () => {
                   <div className="h-64 bg-gradient-to-br from-amber-100 to-cream-200 flex items-center justify-center">
                     <div className="text-6xl text-amber-800/30">
                       <img
-                        src="/lovable-uploads/web 1.jpeg"
+                        src="/lovable-uploads/web 1.jpg"
                         alt=""
                         className="w-24 h-24 object-contain opacity-50"
                       />
