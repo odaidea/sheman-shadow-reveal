@@ -47,7 +47,7 @@ const Gallery = () => {
                   <div className="aspect-square bg-gradient-to-br from-amber-50 to-cream-200 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <img
-                        src="/lovable-uploads/f9fa095c-3824-499a-87b9-c25c1e15d930.png"
+                        src="/lovable-uploads/web 1.jpeg"
                         alt=""
                         className="w-16 h-16 object-contain opacity-20 group-hover:opacity-40 transition-opacity duration-300"
                       />
