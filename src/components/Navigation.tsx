@@ -18,14 +18,14 @@ const Navigation = () => {
 
   return (
     <header className="w-full bg-cream-50/95 backdrop-blur-md shadow-lg fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/lovable-uploads/f9fa095c-3824-499a-87b9-c25c1e15d930.png"
+              src="/lovable-uploads/7d6363d6-9921-42c0-a240-ebca2dd21d51.png"
               alt="SHEMAN Design"
-              className="w-16 h-16 object-contain"
+              className="h-20 w-auto object-contain"
             />
           </Link>
 
