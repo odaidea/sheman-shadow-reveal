@@ -21,15 +21,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/f9fa095c-3824-499a-87b9-c25c1e15d930.png"
               alt="SHEMAN Design"
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 object-contain"
             />
-            <span className="font-playfair text-2xl font-bold text-gray-800">
-              SHEMAN Design
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
