@@ -2,14 +2,17 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
+import { Leaf, Recycle, Hand, MapPin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
-import LogoPattern from '@/components/LogoPattern';
+import LogoInspiredPattern from '@/components/LogoInspiredPattern';
+import MouseThread from '@/components/MouseThread';
 import AnimatedSection from '@/components/AnimatedSection';
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-cream-50 relative">
-      <LogoPattern />
+      <LogoInspiredPattern />
+      <MouseThread />
       <Navigation />
       
       {/* Hero Section */}
@@ -78,20 +81,62 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Full-width Fabric Preparation Section */}
+      <section className="w-full h-96 relative overflow-hidden">
+        <AnimatedSection animation="fade-in-up">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843"
+              alt="Natural fabric preparation process with sunlight filtering through green leaves"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
+          </div>
+          
+          <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
+            <div className="max-w-4xl">
+              <h2 className="font-playfair text-4xl lg:text-6xl font-bold text-white mb-6">
+                From Nature to <span className="italic text-amber-200">Nurture</span>
+              </h2>
+              <p className="text-white/90 text-xl leading-relaxed">
+                Our fabric preparation process honors the earth, using traditional methods
+                that work in harmony with nature's rhythm.
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
       {/* Quick Features Section */}
       <section className="py-16 px-6 bg-white/50">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in-up">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               {[
-                { title: "100% Natural Fibers", desc: "Pure, organic materials" },
-                { title: "Zero Waste", desc: "Sustainable production" },
-                { title: "Handmade", desc: "Traditional craftsmanship" },
-                { title: "Ethiopian Heritage", desc: "Cultural authenticity" }
+                { 
+                  title: "100% Natural Fibers", 
+                  desc: "Pure, organic materials",
+                  icon: Leaf
+                },
+                { 
+                  title: "Zero Waste", 
+                  desc: "Sustainable production",
+                  icon: Recycle
+                },
+                { 
+                  title: "Handmade", 
+                  desc: "Traditional craftsmanship",
+                  icon: Hand
+                },
+                { 
+                  title: "Ethiopian Heritage", 
+                  desc: "Cultural authenticity",
+                  icon: MapPin
+                }
               ].map((feature, index) => (
                 <AnimatedSection key={index} delay={index * 100} className="p-6">
                   <div className="w-16 h-16 bg-amber-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <div className="w-8 h-8 border-2 border-white rotate-45"></div>
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-2">
                     {feature.title}
