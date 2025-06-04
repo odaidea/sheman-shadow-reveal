@@ -1,12 +1,15 @@
 
 import Navigation from '@/components/Navigation';
 import LogoPattern from '@/components/LogoPattern';
+import MouseThread from '@/components/MouseThread';
 import AnimatedSection from '@/components/AnimatedSection';
+import { Leaf, Droplet, Recycle, Users } from 'lucide-react';
 
 const Sustainability = () => {
   return (
     <div className="min-h-screen bg-cream-50 relative">
       <LogoPattern />
+      <MouseThread />
       <Navigation />
       
       <div className="pt-24 pb-16 px-6">
@@ -22,6 +25,32 @@ const Sustainability = () => {
             </div>
           </AnimatedSection>
 
+          {/* Full-width Nature Forest Image */}
+          <section className="w-full h-96 relative overflow-hidden mb-16 -mx-6">
+            <AnimatedSection animation="fade-in-up">
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9"
+                  alt="Lush green forest representing our commitment to environmental sustainability"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
+              </div>
+              
+              <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
+                <div className="max-w-4xl">
+                  <h2 className="font-playfair text-4xl lg:text-6xl font-bold text-white mb-6">
+                    Nature's <span className="italic text-green-200">Guardians</span>
+                  </h2>
+                  <p className="text-white/90 text-xl leading-relaxed">
+                    Every thread we weave honors the earth that provides our materials,
+                    ensuring future generations inherit a world as beautiful as our fabrics.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </section>
+
           {/* What Makes Us Different */}
           <AnimatedSection animation="fade-in-up" delay={200}>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl mb-16">
@@ -34,29 +63,33 @@ const Sustainability = () => {
                   {
                     title: "Fully Natural Textiles",
                     description: "We use only 100% natural fibers sourced from sustainable farms. No synthetic materials ever touch our fabrics.",
-                    icon: "🌱"
+                    icon: Leaf
                   },
                   {
                     title: "Zero Synthetic Chemicals",
                     description: "Our dyeing process uses only natural pigments derived from plants, minerals, and earth-based materials.",
-                    icon: "🎨"
+                    icon: Droplet
                   },
                   {
                     title: "Minimal Environmental Impact",
                     description: "Every step of our production is designed to minimize water usage, energy consumption, and waste generation.",
-                    icon: "🌍"
+                    icon: Recycle
                   },
                   {
                     title: "Community Support",
                     description: "We partner with local artisan communities, providing fair wages and preserving traditional craftsmanship.",
-                    icon: "🤝"
+                    icon: Users
                   }
                 ].map((item, index) => (
                   <AnimatedSection key={index} delay={index * 150} className="p-6">
-                    <div className="text-4xl mb-4">{item.icon}</div>
-                    <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
-                      {item.title}
-                    </h3>
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-amber-800 rounded-full flex items-center justify-center mr-4">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="font-playfair text-xl font-semibold text-gray-800">
+                        {item.title}
+                      </h3>
+                    </div>
                     <p className="text-gray-600 leading-relaxed">{item.description}</p>
                   </AnimatedSection>
                 ))}
@@ -111,11 +144,7 @@ const Sustainability = () => {
               
               <div className="relative">
                 <div className="bg-gradient-to-br from-amber-100 to-cream-200 rounded-2xl p-8 h-96 flex items-center justify-center">
-                  <img
-                    src="/lovable-uploads/f9fa095c-3824-499a-87b9-c25c1e15d930.png"
-                    alt="Sustainability"
-                    className="w-48 h-48 object-contain opacity-30"
-                  />
+                  <Recycle className="w-48 h-48 text-amber-800/30" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-amber-800 rotate-45"></div>
               </div>

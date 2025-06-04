@@ -2,15 +2,17 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MapPin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Phone, MessageCircle, Clock, Heart } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import LogoPattern from '@/components/LogoPattern';
+import MouseThread from '@/components/MouseThread';
 import AnimatedSection from '@/components/AnimatedSection';
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-cream-50 relative">
       <LogoPattern />
+      <MouseThread />
       <Navigation />
       
       <div className="pt-24 pb-16 px-6">
@@ -25,6 +27,32 @@ const Contact = () => {
               </p>
             </div>
           </AnimatedSection>
+
+          {/* Full-width Water and Nature Image */}
+          <section className="w-full h-96 relative overflow-hidden mb-16 -mx-6">
+            <AnimatedSection animation="fade-in-up">
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22"
+                  alt="Peaceful water surrounded by nature representing our welcoming approach to collaboration"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60"></div>
+              </div>
+              
+              <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
+                <div className="max-w-4xl">
+                  <h2 className="font-playfair text-4xl lg:text-6xl font-bold text-white mb-6">
+                    Open <span className="italic text-amber-200">Conversations</span>
+                  </h2>
+                  <p className="text-white/90 text-xl leading-relaxed">
+                    Like the gentle flow of water, our communication is natural, open,
+                    and always welcoming. Let's create something beautiful together.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </section>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -130,9 +158,12 @@ const Contact = () => {
 
                 {/* Custom Orders */}
                 <div className="bg-amber-800 text-white rounded-2xl p-8">
-                  <h3 className="font-playfair text-2xl font-bold mb-4">
-                    Custom Orders
-                  </h3>
+                  <div className="flex items-center mb-4">
+                    <Heart className="w-8 h-8 mr-3" />
+                    <h3 className="font-playfair text-2xl font-bold">
+                      Custom Orders
+                    </h3>
+                  </div>
                   <p className="text-cream-100 mb-6">
                     Interested in a custom piece? We love creating unique designs that reflect your personal style while honoring our sustainable practices.
                   </p>
@@ -146,9 +177,12 @@ const Contact = () => {
 
                 {/* Business Hours */}
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                  <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-4">
-                    Business Hours
-                  </h3>
+                  <div className="flex items-center mb-4">
+                    <Clock className="w-6 h-6 text-amber-800 mr-3" />
+                    <h3 className="font-playfair text-xl font-semibold text-gray-800">
+                      Business Hours
+                    </h3>
+                  </div>
                   <div className="space-y-2 text-gray-600">
                     <div className="flex justify-between">
                       <span>Monday - Friday</span>
