@@ -12,6 +12,7 @@ const Navigation = () => {
     { path: '/about', label: 'About Us' },
     { path: '/products', label: 'Products' },
     { path: '/sustainability', label: 'Sustainability' },
+    { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
   ];
 
